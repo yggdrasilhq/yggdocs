@@ -15,6 +15,7 @@ markdown_extensions:
       alternate_style: true
 nav:
   - Home: index.md
+  - Preface: wiki/vignettes/death-and-rebirth-smartos-to-yggdrasil.md
   - Quickstart:
       - Overview: quickstart/index.md
       - 01 Prerequisites: quickstart/01-prerequisites.md
@@ -45,3 +46,4 @@ nav:
       - Migration: dev/migration.md
       - Monorepo Map: dev/monorepo-map.md
       - Writing Style: dev/writing-style.md
+      - Audience Feedback: dev/audience-feedback.md
