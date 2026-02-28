@@ -26,14 +26,48 @@ nav:
   - Wiki:
       - Overview: wiki/index.md
       - Why Yggdrasil: wiki/why-yggdrasil.md
-      - LXC Configuration: wiki/LXC_Configuration.md
-      - ZFS Setup: wiki/ZFS_Setup.md
-      - KDE: wiki/KDE.md
-      - KVM Harness: wiki/KVM_Harness.md
+      - Core:
+          - LXC Configuration: wiki/LXC_Configuration.md
+          - ZFS Setup: wiki/ZFS_Setup.md
+          - KDE: wiki/KDE.md
+          - KVM Harness: wiki/KVM_Harness.md
+          - Xen: wiki/XEN.md
+      - Build and Release:
+          - Debian Live-Build Crash Course: wiki/Debian_lb_build_crash_course.md
+          - Build Release (Wiki): wiki/build-release.md
+          - Smoke Tests (Wiki): wiki/smoke-tests.md
+          - Release Checklist (Wiki): wiki/release-checklist.md
+          - TUI Notes (Wiki): wiki/tui.md
+      - Networking and Services:
+          - Relay Host Setup: wiki/Relay_Host_Setup.md
+          - HAProxy: wiki/HAProxy.md
+          - Email Hosting: wiki/Email_Hosting.md
+          - GPU Passthrough: wiki/GPU_Passthrough.md
+          - Storage Layout: wiki/Storage_Layout.md
+          - UPS Power: wiki/UPS_Power.md
+          - Ventoy ISO Copy: wiki/Ventoy_ISO_Copy.md
+          - Ventoy Update: wiki/Ventoy_Update.md
+          - Distrobuilder Usage: wiki/Distrobuilder_Usage.md
+          - Command Centers: wiki/Command_Centers.md
+      - LXC Fleet:
+          - LXC Overview: wiki/lxc/index.md
+          - Containers Inventory: wiki/lxc/containers.md
+          - APT Cache: wiki/lxc/apt.md
+          - Docs Server: wiki/lxc/docs-server.md
+          - OpenWrt: wiki/lxc/openwrt.md
+          - Traccar: wiki/lxc/traccar.md
+          - Uptime Kuma: wiki/lxc/uptime-kuma.md
+          - ARC Firmware Workflow: wiki/lxc/ARC-Firmware-update-workflow.md
+          - Upgrade Ritual: wiki/lxc/upgrade-ritual.md
       - Recipes:
+          - Shifting Heads with ZFS (Wiki): wiki/shifting-heads-zfs.md
           - Shifting Heads with ZFS: wiki/recipes/shifting-heads-zfs.md
           - yggterm Operator Workflows: wiki/recipes/yggterm-operator-workflows.md
           - Live Host Audit Checklist: wiki/recipes/live-host-audit-checklist.md
+          - Android README: wiki/recipes/android_README.md
+          - Android AGENTS: wiki/recipes/android_AGENTS.md
+          - APT Hybrid Pinning: wiki/recipes/config_apt_debian-stable-for-kernels-and-headers-sid-for-everything-else.md
+          - LEGO Script Notes: wiki/recipes/scripts_lego_README.md
       - Vignettes:
           - First Week Journey: wiki/vignettes/first-week-journey.md
           - Death and Rebirth: wiki/vignettes/death-and-rebirth-smartos-to-yggdrasil.md
@@ -50,7 +84,10 @@ nav:
       - Architecture: dev/architecture.md
       - Build Release: dev/build-release.md
       - Smoke Tests: dev/smoke-tests.md
+      - Release Checklist: dev/release-checklist.md
       - Migration: dev/migration.md
       - Monorepo Map: dev/monorepo-map.md
+      - TUI: dev/tui.md
+      - GitHub Publish: dev/github-publish.md
       - Writing Style: dev/writing-style.md
       - Audience Feedback: dev/audience-feedback.md
