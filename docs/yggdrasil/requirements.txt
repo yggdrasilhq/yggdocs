@@ -1,2 +1,0 @@
-mkdocs>=1.6,<2.0
-mkdocs-shadcn>=0.9.0

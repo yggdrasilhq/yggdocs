@@ -1,9 +1,11 @@
-# Yggdrasil Documentation
+# Yggdrasil Ecosystem Manual
 
-This repository is the canonical home for public documentation across:
+This manual is written for builders who are turning scattered infrastructure into an intentional system.
 
-- `yggdrasil`
-- `ygg-client`
-- `ygg-cli`
+You can read it in three passes:
 
-Use the navigation to access project-specific manuals.
+- `quickstart`: get running quickly with working defaults.
+- `wiki`: recipes, vignettes, and real operational patterns.
+- `dev`: architecture and contribution details.
+
+Yggdrasil came from years of lived operations. This documentation keeps that spirit portable.

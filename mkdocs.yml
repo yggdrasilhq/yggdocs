@@ -1,5 +1,5 @@
 site_name: Yggdrasil Docs
-site_description: Central docs for yggdrasilhq projects
+site_description: Ecosystem docs for yggdrasilhq projects
 site_url: https://yggdrasil.gour.top
 theme:
   name: shadcn
@@ -15,10 +15,30 @@ markdown_extensions:
       alternate_style: true
 nav:
   - Home: index.md
-  - Yggdrasil:
-      - Overview: yggdrasil/index.md
-      - Quickstart: yggdrasil/quickstart/index.md
-      - Wiki: yggdrasil/wiki/index.md
-      - Dev: yggdrasil/dev/index.md
-  - Ygg Client:
-      - Overview: ygg-client/index.md
+  - Quickstart:
+      - Overview: quickstart/index.md
+      - 01 Prerequisites: quickstart/01-prerequisites.md
+      - 02 Configure: quickstart/02-configure.md
+      - 03 Build: quickstart/03-build.md
+      - 04 Smoke: quickstart/04-smoke.md
+      - 05 First Boot: quickstart/05-first-boot.md
+  - Wiki:
+      - Overview: wiki/index.md
+      - Why Yggdrasil: wiki/why-yggdrasil.md
+      - LXC Configuration: wiki/LXC_Configuration.md
+      - ZFS Setup: wiki/ZFS_Setup.md
+      - KDE: wiki/KDE.md
+      - KVM Harness: wiki/KVM_Harness.md
+      - Recipes:
+          - Shifting Heads with ZFS: wiki/recipes/shifting-heads-zfs.md
+          - yggterm Operator Workflows: wiki/recipes/yggterm-operator-workflows.md
+      - Vignettes:
+          - First Week Journey: wiki/vignettes/first-week-journey.md
+  - Dev:
+      - Overview: dev/index.md
+      - Architecture: dev/architecture.md
+      - Build Release: dev/build-release.md
+      - Smoke Tests: dev/smoke-tests.md
+      - Migration: dev/migration.md
+      - Monorepo Map: dev/monorepo-map.md
+      - Writing Style: dev/writing-style.md
