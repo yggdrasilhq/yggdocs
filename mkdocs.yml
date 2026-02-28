@@ -16,6 +16,8 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Preface: wiki/vignettes/death-and-rebirth-smartos-to-yggdrasil.md
+  - The Undocumented Journey So Far: wiki/vignettes/the-undocumented-journey-so-far.md
+  - Recipe Craftsmanship: wiki/vignettes/recipe-craftsmanship.md
   - Quickstart:
       - Overview: quickstart/index.md
       - 01 Prerequisites: quickstart/01-prerequisites.md
