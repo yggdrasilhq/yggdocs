@@ -14,3 +14,5 @@ Use it for:
 - [Death and Rebirth (SmartOS -> Yggdrasil)](vignettes/death-and-rebirth-smartos-to-yggdrasil.md)
 - [Journal-Driven Operations](vignettes/journal-driven-operations.md)
 - [Recipe Craftsmanship](vignettes/recipe-craftsmanship.md)
+- [The Undocumented Journey So Far](vignettes/the-undocumented-journey-so-far.md)
+- [Live Host Audit Checklist](recipes/live-host-audit-checklist.md)

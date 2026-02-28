@@ -33,11 +33,13 @@ nav:
       - Recipes:
           - Shifting Heads with ZFS: wiki/recipes/shifting-heads-zfs.md
           - yggterm Operator Workflows: wiki/recipes/yggterm-operator-workflows.md
+          - Live Host Audit Checklist: wiki/recipes/live-host-audit-checklist.md
       - Vignettes:
           - First Week Journey: wiki/vignettes/first-week-journey.md
           - Death and Rebirth: wiki/vignettes/death-and-rebirth-smartos-to-yggdrasil.md
           - Journal-Driven Operations: wiki/vignettes/journal-driven-operations.md
           - Recipe Craftsmanship: wiki/vignettes/recipe-craftsmanship.md
+          - The Undocumented Journey So Far: wiki/vignettes/the-undocumented-journey-so-far.md
   - Dev:
       - Overview: dev/index.md
       - Architecture: dev/architecture.md
