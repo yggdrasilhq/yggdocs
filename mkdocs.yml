@@ -1,0 +1,24 @@
+site_name: Yggdrasil Docs
+site_description: Central docs for yggdrasilhq projects
+site_url: https://yggdrasil.gour.top
+theme:
+  name: shadcn
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+nav:
+  - Home: index.md
+  - Yggdrasil:
+      - Overview: yggdrasil/index.md
+      - Quickstart: yggdrasil/quickstart/index.md
+      - Wiki: yggdrasil/wiki/index.md
+      - Dev: yggdrasil/dev/index.md
+  - Ygg Client:
+      - Overview: ygg-client/index.md
