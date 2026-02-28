@@ -34,6 +34,9 @@ nav:
           - yggterm Operator Workflows: wiki/recipes/yggterm-operator-workflows.md
       - Vignettes:
           - First Week Journey: wiki/vignettes/first-week-journey.md
+          - Death and Rebirth: wiki/vignettes/death-and-rebirth-smartos-to-yggdrasil.md
+          - Journal-Driven Operations: wiki/vignettes/journal-driven-operations.md
+          - Recipe Craftsmanship: wiki/vignettes/recipe-craftsmanship.md
   - Dev:
       - Overview: dev/index.md
       - Architecture: dev/architecture.md
