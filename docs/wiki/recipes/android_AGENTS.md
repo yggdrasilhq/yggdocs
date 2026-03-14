@@ -11,7 +11,8 @@
 - General shared storage root: `~/storage/shared`
 
 ## Current sync jobs
-- Obsidian: Termux job scheduler (Job 101) runs `android/scripts/sync-obsidian.sh` hourly on unmetered network; manual: `bash android/scripts/sync-obsidian.sh --verbose` (auto one-time `--resync` on bisync error 7). Log: `~/.local/state/ygg_client/sync-obsidian.log`.
+- Fast notes/Obsidian: Termux job scheduler (Job 101) runs `android/scripts/sync-yggsync-fast.sh` every 3 hours on unmetered network with a battery gate. Manual recovery: `bash android/shortcuts/sync-obsidian-resync`. Log: `~/.local/state/ygg_client/sync-yggsync-fast.log`.
+- Bulk media/archive: Termux job scheduler (Job 102) runs `android/scripts/sync-yggsync-bulk.sh` every 12 hours on unmetered network with a stricter battery gate. Log: `~/.local/state/ygg_client/sync-yggsync-bulk.log`.
 - Boot setup: `~/.termux/boot/ygg-start-sync-jobs` calls `android/scripts/termux-boot-sync-jobs.sh` to register jobs. Widget/dynamic shortcuts installed by `android/scripts/install.sh`.
 
 ## Rclone
@@ -19,7 +20,7 @@
 
 ## yggsync (new multi-job orchestrator)
 - Repo: `~/gh/yggsync` (separate Go project). Build with `GOOS=android GOARCH=arm64 CGO_ENABLED=0 go build ./cmd/yggsync`.
-- Or download a release: `bash android/scripts/fetch-yggsync.sh v0.2.0` (drops into `android/bin/yggsync`).
+- Or download a release: `bash android/scripts/fetch-yggsync.sh` (drops into `android/bin/yggsync`).
 - Re-run `android/scripts/install.sh` on device to install it into `~/.local/bin`.
 - Config template: `android/config/ygg_sync.toml.template` (copy to `~/.config/ygg_sync.toml` on device).
 - Primary job coverage:
@@ -28,13 +29,13 @@
   - DCIM + Screenshots to immich/immich02 with ~31-day local retention.
   - CubeCallACR recordings with short retention.
   - androidfs catch-all with keep-latest rules for Signal/SMS/call log backups; excludes the special folders above.
-- CLI: `yggsync -list`, `yggsync -jobs obsidian,dcim`, `yggsync -dry-run`.
+- CLI: `yggsync -list`, `yggsync -jobs obsidian,dcim`, `yggsync -dry-run`, `yggsync -jobs obsidian --resync --force-bisync`.
 - Safety: `retained_copy` uploads first and only prunes files confirmed on the remote (size + modtime check).
 - Termux jobs (current setup):
-  - Job 101 (hourly, unmetered): `android/scripts/sync-yggsync-fast.sh` (obsidian).
-  - Job 102 (every 6h, unmetered, battery-not-low): `android/scripts/sync-yggsync-bulk.sh` (media/backup set).
+  - Job 101 (every 3h, unmetered, battery-not-low): `android/scripts/sync-yggsync-fast.sh` (obsidian/notes job if present).
+  - Job 102 (every 12h, unmetered, battery-not-low): `android/scripts/sync-yggsync-bulk.sh` (media/backup set if present).
 
 ## TODO / validation after new system lands
 - Confirm `~/.config/ygg_sync.toml` paths match final NAS layout (`smbfs/dada/obsidian`, `immich/bon/DCIM`, `immich02/bon/android`, etc.).
-- Ensure `termux-job-scheduler` jobs switch from `sync-obsidian.sh` to `yggsync ...` or add a new job.
-- Update widgets/shortcuts to call `yggsync -jobs obsidian` and add ones for media syncs as needed.
+- Validate the final `~/.config/ygg_sync.toml` job names produced by `yggcli` on Android and ensure they line up with the wrapper defaults.
+- Add a dedicated manual bulk-sync shortcut once the public media recipe settles.
