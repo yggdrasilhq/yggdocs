@@ -1,20 +1,37 @@
 # GitHub Publish
 
-## 1) Set remote
+The public home of the ecosystem is the GitHub organization `yggdrasilhq`.
+
+## 1) Create the repo in the org
+
+Example:
 
 ```bash
-./scripts/setup-github-remote.sh git@github.com:avikalpa/yggdrasil.git
+gh repo create yggdrasilhq/yggsync --public --source ~/gh/yggsync --remote origin --push
 ```
 
-## 2) Push `main`
+Repeat the same pattern for:
 
-```bash
-git push -u origin main
-```
+- `yggdrasil`
+- `yggcli`
+- `yggclient`
+- `yggsync`
+- `yggdocs`
+- `yggterm`
 
-## 3) Verify
+## 2) Verify the remote
 
 ```bash
 git remote -v
 git ls-remote --heads origin
 ```
+
+## 3) Only after the dependency order is sane, repoint consumers
+
+Current rule:
+
+1. publish `yggsync` first
+2. repoint `yggclient` fetch/install URLs
+3. update `yggdocs`
+
+This avoids the common mistake of shipping a public client that still points at placeholder or private dependency URLs.

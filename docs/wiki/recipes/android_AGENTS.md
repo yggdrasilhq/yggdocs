@@ -19,7 +19,7 @@
 
 ## yggsync (new multi-job orchestrator)
 - Repo: `~/gh/yggsync` (separate Go project). Build with `GOOS=android GOARCH=arm64 CGO_ENABLED=0 go build ./cmd/yggsync`.
-- Or download a release: `bash android/scripts/fetch-yggsync.sh v0.1.3` (drops into `android/bin/yggsync`).
+- Or download a release: `bash android/scripts/fetch-yggsync.sh v0.2.0` (drops into `android/bin/yggsync`).
 - Re-run `android/scripts/install.sh` on device to install it into `~/.local/bin`.
 - Config template: `android/config/ygg_sync.toml.template` (copy to `~/.config/ygg_sync.toml` on device).
 - Primary job coverage:

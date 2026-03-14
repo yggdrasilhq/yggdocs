@@ -1,10 +1,28 @@
 # 05. Boot and Validate
 
-After writing ISO to Ventoy and booting:
+After writing the ISO to Ventoy and booting, do not rely on vibes.
+Walk the machine.
 
-- Confirm pool import helper and service state.
-- Confirm LXC path defaults and container autostart behavior.
-- Confirm infisical-ensure service behavior.
-- For KDE profile, verify desktop login, Wi-Fi visibility, and expected firmware behavior.
+```bash
+systemctl status ygg-import-zpool-at-boot
+systemctl status ygg-lxc-autostart
+systemctl status ygg-infisical-ensure
+cat /etc/lxc/lxc.conf
+cat /etc/lxc/default.conf
+```
+
+On the live reference host, the invariant looks like this:
+
+- `/etc/lxc/lxc.conf` points at `/zroot/lxc`
+- `/etc/lxc/default.conf` carries the `macvlan` template on `eno1`
+- `ygg-import-zpool-at-boot` runs before `ygg-lxc-autostart`
+- `ygg-infisical-ensure` runs after container autostart, not before
+
+For KDE, add these checks:
+
+- desktop login works
+- Wi-Fi radios are visible
+- `zpool status` and `zfs list` work from the installed userland
+- any laptop-specific firmware expectations are verified on the actual hardware
 
 Use `wiki/smoke-tests.md` for the complete post-boot checklist.

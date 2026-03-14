@@ -19,7 +19,7 @@ Typical patterns:
 Source:
 
 ```bash
-git clone https://g.gour.top/yggdrasilhq/yggsync ~/gh/yggsync
+git clone https://github.com/yggdrasilhq/yggsync ~/gh/yggsync
 cd ~/gh/yggsync
 go build ./cmd/yggsync
 install -m 0755 yggsync ~/.local/bin/yggsync

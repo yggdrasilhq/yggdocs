@@ -1,19 +1,31 @@
-# mkconfig TUI (Developer Notes)
+# yggcli (Developer Notes)
 
-`scripts/mkconfig-tui.sh` now has two UX layers:
+The shell TUI experiment is over.
+`yggcli` is now the intended operator-facing terminal UX for the ecosystem.
 
-- `simple`: constrained, low-cognitive-load prompts.
-- `advanced`: full dial visibility for operators.
+## Why it exists
 
-The file emitted by the TUI is consumed by both:
+The old private stack worked, but it was too easy for configuration to become “whatever Avikalpa remembers this week.”
+That is not a public product surface.
 
-- `mkconfig.sh --config <envfile>`
-- `scripts/build-profile.sh --config <envfile>`
+`yggcli` fixes this by doing three things:
 
-Important emitted vars:
+1. guiding the operator through the main decisions,
+2. writing the native config files that each repo already understands,
+3. leaving those files human-editable after generation.
 
-- `YGG_BUILD_PROFILE`
-- `YGG_ENABLE_QEMU_SMOKE`
-- `YGG_SETUP_MODE`
-- `YGG_*` networking fields
-- `YGG_APT_*` proxy fields
+## Current output
+
+`yggcli` writes:
+
+- `yggdrasil/ygg.local.toml`
+- `yggclient/yggclient.local.toml`
+- `yggclient/config/profiles.local.env`
+- `yggsync/ygg_sync.local.toml`
+
+## Design rule
+
+The TUI is the front end, not the prison.
+
+If an operator wants to bypass the TUI and edit TOML directly, the system should still make sense.
+That is how you keep trust with advanced users while still giving newcomers a good first run.

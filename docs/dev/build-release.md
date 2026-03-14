@@ -3,14 +3,17 @@
 ## Standard Release Command
 
 ```bash
-./mkconfig.sh --profile both
+cd ~/gh/yggdrasil
+./mkconfig.sh --config ./ygg.local.toml --profile both
 ```
 
 ## With Guided Config
 
 ```bash
-./scripts/mkconfig-tui.sh
-./mkconfig.sh --profile both --config ./config/includes.chroot/etc/yggdrasil/user-config.env
+cd ~/gh/yggcli
+cargo run
+cd ~/gh/yggdrasil
+./mkconfig.sh --config ./ygg.local.toml --profile both
 ```
 
 ## Publish Gate
@@ -27,7 +30,7 @@ Release only if:
 Enable VM boot checks on hosts with QEMU/KVM available:
 
 ```bash
-YGG_ENABLE_QEMU_SMOKE=true ./mkconfig.sh --profile both
+./mkconfig.sh --config ./ygg.local.toml --profile both
 ```
 
 Use `~/qemu_kvm.md` for harness prerequisites and environment validation.
