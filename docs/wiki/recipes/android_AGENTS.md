@@ -18,7 +18,7 @@
 - Remote `smb0` expected in `~/.config/rclone/rclone.conf` (template in `android/config/rclone/rclone.conf.template`), pointing to NAS smbfs share. Obsidian path: `smb0:data/obsidian` (served from smbfs/dada/obsidian on NAS).
 
 ## yggsync (new multi-job orchestrator)
-- Repo: `~/git/yggsync` (separate Go project). Build with `GOOS=android GOARCH=arm64 CGO_ENABLED=0 go build ./cmd/yggsync`.
+- Repo: `~/gh/yggsync` (separate Go project). Build with `GOOS=android GOARCH=arm64 CGO_ENABLED=0 go build ./cmd/yggsync`.
 - Or download a release: `bash android/scripts/fetch-yggsync.sh v0.1.3` (drops into `android/bin/yggsync`).
 - Re-run `android/scripts/install.sh` on device to install it into `~/.local/bin`.
 - Config template: `android/config/ygg_sync.toml.template` (copy to `~/.config/ygg_sync.toml` on device).

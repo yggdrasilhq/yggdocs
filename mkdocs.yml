@@ -65,6 +65,7 @@ nav:
           - Shifting Heads with ZFS (Wiki): wiki/shifting-heads-zfs.md
           - Shifting Heads with ZFS: wiki/recipes/shifting-heads-zfs.md
           - yggterm Operator Workflows: wiki/recipes/yggterm-operator-workflows.md
+          - yggsync: wiki/recipes/yggsync.md
           - Live Host Audit Checklist: wiki/recipes/live-host-audit-checklist.md
           - Android README: wiki/recipes/android_README.md
           - Android AGENTS: wiki/recipes/android_AGENTS.md
