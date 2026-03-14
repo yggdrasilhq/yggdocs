@@ -7,5 +7,5 @@
 
 Optional but recommended:
 
-- A local APT cache/proxy endpoint.
 - A dedicated test machine for first-boot checks.
+- An APT cache/proxy, but only after the first server is alive. Do not make the first build depend on infrastructure that does not exist yet.

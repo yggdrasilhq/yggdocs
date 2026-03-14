@@ -23,7 +23,9 @@ For the first server build, focus on:
 - SSH key embedding
 - network mode (`dhcp` vs static)
 - macvlan / LXC parent interface
-- optional APT proxy
+- `apt_proxy_mode = "off"`
+
+Then, once the host is up and you have storage, networking, and LXC under control, build the apt-proxy container from the recipe and switch to explicit proxy mode for later builds.
 
 Operator note:
 keep the public examples generic and let your private infrastructure live only in the local files.
