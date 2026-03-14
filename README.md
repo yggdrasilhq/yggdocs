@@ -1,11 +1,13 @@
-# ygg-docs
+# yggdocs
 
-Central documentation and wiki repository for Yggdrasil projects.
+Central documentation and wiki repository for the Yggdrasil ecosystem.
 
 ## Scope
 
 - yggdrasil build and operations docs
-- ygg-client endpoint docs
+- yggclient endpoint docs
+- yggsync workflow docs
+- yggcli and yggterm operator guidance
 - quickstart, wiki, and developer references
 
 ## Local Preview
