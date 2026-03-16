@@ -64,6 +64,7 @@ nav:
       - Recipes:
           - Shifting Heads with ZFS (Wiki): wiki/shifting-heads-zfs.md
           - Shifting Heads with ZFS: wiki/recipes/shifting-heads-zfs.md
+          - Public Access via VPS: wiki/recipes/public-access-via-vps-mail-first.md
           - yggterm Operator Workflows: wiki/recipes/yggterm-operator-workflows.md
           - yggsync: wiki/recipes/yggsync.md
           - Live Host Audit Checklist: wiki/recipes/live-host-audit-checklist.md

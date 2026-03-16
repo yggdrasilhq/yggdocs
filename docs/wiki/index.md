@@ -16,6 +16,7 @@ Use it for:
 - [Recipe Craftsmanship](vignettes/recipe-craftsmanship.md)
 - [The Undocumented Journey So Far](vignettes/the-undocumented-journey-so-far.md)
 - [Live Host Audit Checklist](recipes/live-host-audit-checklist.md)
+- [Public Access via VPS: Mail-First Scaffold](recipes/public-access-via-vps-mail-first.md)
 - [Battle Logs I: From Journal to Operating System](vignettes/battle-logs-01-from-journal.md)
 - [Battle Log: RAM Epiphany](vignettes/battle-log-ram-epiphany.md)
 - [Battle Log: GPU Realism Beats GPU Fantasy](vignettes/battle-log-gpu-realism.md)

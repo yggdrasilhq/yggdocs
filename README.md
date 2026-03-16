@@ -13,11 +13,13 @@ Central documentation and wiki repository for the Yggdrasil ecosystem.
 ## Local Preview
 
 ```bash
-python3 -m venv .venv
-. .venv/bin/activate
-pip install -r requirements.txt
-mkdocs serve -a 0.0.0.0:8000
+./scripts/serve-docs.sh
 ```
+
+Environment overrides:
+
+- `HOST=127.0.0.1`
+- `PORT=8001`
 
 ## License
 
