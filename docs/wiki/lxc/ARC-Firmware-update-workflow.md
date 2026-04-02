@@ -67,3 +67,39 @@ LD_LIBRARY_PATH=. ./igsc fw-data version --device /dev/mei1
 - Current state after this run: FW `DG02_1.3266`, OPROM CODE `14 00 31 04`, OPROM DATA `14 00 2C 04`, FW Data `Major 101 / OEM 15 / VCN 1`.
 - Reboot/power-cycle the host after flashing so new firmware/OPROM is loaded cleanly.
 - Host is a live environment; re-clone the two repos before the next update if they are gone.
+
+## April 2026 re-check on `manin`
+
+This workflow was re-run on `manin` after enabling IOMMU, Re-Size BAR, and SR-IOV in firmware and booting a live image with `i915-sriov-dkms`.
+
+Observed device state:
+
+- device: `8086:56a0 / 8086:1020`
+- MEI node: `/dev/mei1`
+- current FW: `DG02_1.3266`
+- current OPROM CODE: `14 00 36 04 00 00 00 00`
+- current OPROM DATA: `14 00 2C 04 00 00 00 00`
+- current FW Data: `Major 101 / OEM 15 / VCN 1`
+
+Image comparison against `/root/ARC-Firmware/Latest`:
+
+- main FW image matches device (`DG02_1.3266`)
+- OPROM CODE image matches device (`14 00 36 04 ...`)
+- OPROM DATA image matches device (`14 00 2C 04 ...`)
+- FW Data reports the same visible version, but `igsc` still refuses normal update because of OEM compatibility rules
+
+Safe no-downgrade update checks:
+
+- `fw update`: refused because image and device are the same version
+- `oprom-code update`: refused because installed version is newer or equal
+- `oprom-data update`: refused because installed version is newer or equal
+- `fw-data update`: refused on OEM compatibility despite matching visible version strings
+
+Conclusion:
+
+- for this host, the Arc A770 is **not blocked by stale A770 firmware/oprom payloads**
+- reflashing the same A770 `Latest` images is not the next useful move for missing SR-IOV capability
+- if experimentation continues, it should focus on:
+  - platform/PCIe link training issues
+  - alternative firmware/config payload hypotheses
+  - not reapplying the same baseline A770 images
