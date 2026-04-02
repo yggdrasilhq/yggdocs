@@ -68,9 +68,9 @@ LD_LIBRARY_PATH=. ./igsc fw-data version --device /dev/mei1
 - Reboot/power-cycle the host after flashing so new firmware/OPROM is loaded cleanly.
 - Host is a live environment; re-clone the two repos before the next update if they are gone.
 
-## April 2026 re-check on `manin`
+## April 2026 re-check on a live host
 
-This workflow was re-run on `manin` after enabling IOMMU, Re-Size BAR, and SR-IOV in firmware and booting a live image with `i915-sriov-dkms`.
+This workflow was re-run on a live host after enabling IOMMU, Re-Size BAR, and SR-IOV in firmware and booting a live image with `i915-sriov-dkms`.
 
 Observed device state:
 

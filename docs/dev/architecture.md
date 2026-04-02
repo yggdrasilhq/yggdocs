@@ -25,7 +25,7 @@ flowchart LR
 
 ## Boot Chain Invariant
 
-The live host on `manin` makes the intended boot contract explicit:
+The live host makes the intended boot contract explicit:
 
 ```mermaid
 flowchart TD
